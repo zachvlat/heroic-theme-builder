@@ -1,6 +1,6 @@
 # Heroic Theme Builder
 
-A simple web app to create custom dark Material-style themes with green accents for the Heroic Games Launcher.  
+A simple web app to create custom themes with color accents for the Heroic Games Launcher.  
 Build your own color scheme and font selection, then preview the theme live and copy the generated CSS to use in your launcher or other projects.
 
 ---
@@ -9,7 +9,7 @@ Build your own color scheme and font selection, then preview the theme live and 
 
 - Interactive live preview of your theme with a navbar, buttons, and text
 - Customize key colors: accent, background, surface, text, and danger
-- Choose from multiple Google Fonts plus the native GNOME Adwaita font
+- Choose from multiple Google Fonts
 - Define a custom CSS theme class name
 - Responsive 2-column layout for controls and preview
 - Copy generated CSS with one click
@@ -42,8 +42,7 @@ This app supports:
 - Raleway
 - Source Sans Pro
 - Merriweather
-- **Adwaita** (system font, mainly for Linux/GNOME users)
-
+  
 ---
 
 ## How it works
