@@ -29,6 +29,52 @@
       padding: 1rem 2rem;
       gap: 1.5rem;
     }
+    
+    .app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.app-header .logo {
+  color: var(--preview-accent);
+}
+
+.app-header a {
+  color: var(--preview-text);
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.app-header a:hover {
+  background: var(--preview-accent-overlay, #81c784cc);
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-top: 1px solid #333;
+  margin-top: auto;
+}
+
+.app-footer a {
+  color: #8ef8b5;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
 
     h1 {
       margin: 0 0 1rem 0;
@@ -193,7 +239,13 @@
   </style>
 </head>
 <body>
-  <h1>Heroic Theme Builder</h1>
+<header class="app-header">
+  <div class="logo">🌈 Heroic Theme Builder</div>
+  <nav>
+    <a href="https://github.com/zachvlat/" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+</header>
+
 
   <div class="container">
     <div class="controls">
@@ -352,5 +404,8 @@ body.${themeClass} {
     // Initial theme update on load
     updateTheme();
   </script>
+  <footer class="app-footer">
+  <p>Created by <a href="https://github.com/zachvlat/" target="_blank" rel="noopener noreferrer">zachvlat</a> · GNU v3 License</p>
+</footer>
 </body>
 </html>
