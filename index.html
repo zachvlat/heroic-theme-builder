@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Heroic Theme Builder</title>
@@ -29,52 +30,52 @@
       padding: 1rem 2rem;
       gap: 1.5rem;
     }
-    
+
     .app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1a1a1a;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  border: 1px solid #2a2a2a;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1a1a1a;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      border: 1px solid #2a2a2a;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
 
-.app-header .logo {
-  color: var(--preview-accent);
-}
+    .app-header .logo {
+      color: var(--preview-accent);
+    }
 
-.app-header a {
-  color: var(--preview-text);
-  text-decoration: none;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  transition: background 0.2s ease;
-}
+    .app-header a {
+      color: var(--preview-text);
+      text-decoration: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
 
-.app-header a:hover {
-  background: var(--preview-accent-overlay, #81c784cc);
-}
+    .app-header a:hover {
+      background: var(--preview-accent-overlay, #81c784cc);
+    }
 
-.app-footer {
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  color: #ccc;
-  border-top: 1px solid #333;
-  margin-top: auto;
-}
+    .app-footer {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: #ccc;
+      border-top: 1px solid #333;
+      margin-top: auto;
+    }
 
-.app-footer a {
-  color: #8ef8b5;
-  text-decoration: none;
-}
+    .app-footer a {
+      color: #8ef8b5;
+      text-decoration: none;
+    }
 
-.app-footer a:hover {
-  text-decoration: underline;
-}
+    .app-footer a:hover {
+      text-decoration: underline;
+    }
 
     h1 {
       margin: 0 0 1rem 0;
@@ -120,17 +121,21 @@
       color: white;
       transition: background 0.2s ease;
     }
+
     .controls input[type="color"] {
       padding: 0;
       height: 2.5rem;
       cursor: pointer;
     }
+
     .controls input[type="color"]::-webkit-color-swatch-wrapper {
       padding: 0;
     }
+
     .controls input[type="color"]::-webkit-color-swatch {
       border-radius: 5px;
     }
+
     .controls input[type="text"]:focus,
     .controls select:focus {
       outline: 2px solid var(--preview-accent);
@@ -148,19 +153,29 @@
     .preview {
       background: var(--preview-bg);
       color: var(--preview-text);
-      padding: 2rem;
       border-radius: 8px;
       box-shadow: 0 0 8px #0009;
       flex-shrink: 0;
+      display: flex;
+      overflow: hidden;
     }
 
     .navbar {
       background: var(--preview-surface);
       padding: 1rem;
       font-weight: bold;
-      border-radius: 6px;
-      margin-bottom: 1rem;
       user-select: none;
+      width: 33%;
+      min-width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .preview-content {
+      flex: 1;
+      padding: 2rem;
     }
 
     .button {
@@ -172,9 +187,11 @@
       font-weight: bold;
       cursor: pointer;
       margin-right: 1rem;
+      margin-bottom: 1rem;
       transition: background 0.2s ease;
       user-select: none;
     }
+
     .button:hover {
       background: var(--preview-accent-overlay, #81c784cc);
     }
@@ -182,6 +199,7 @@
     .danger {
       background: var(--preview-danger);
     }
+
     .danger:hover {
       background: #d94d4d;
     }
@@ -224,6 +242,7 @@
       user-select: none;
       transition: background 0.2s ease;
     }
+
     .copy-button:hover {
       background: #559b9d;
     }
@@ -232,20 +251,29 @@
       .container {
         flex-direction: column;
       }
+
       .preview-area {
         min-width: auto;
+      }
+
+      .preview {
+        flex-direction: column;
+      }
+
+      .navbar {
+        width: 100%;
       }
     }
   </style>
 </head>
-<body>
-<header class="app-header">
-  <div class="logo">🛡️ Heroic Theme Builder</div>
-  <nav>
-    <a href="https://github.com/zachvlat/heroic-theme-builder" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </nav>
-</header>
 
+<body>
+  <header class="app-header">
+    <div class="logo">🛡️ Heroic Theme Builder</div>
+    <nav>
+      <a href="https://github.com/zachvlat/heroic-theme-builder" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </header>
 
   <div class="container">
     <div class="controls">
@@ -286,9 +314,11 @@
     <div class="preview-area">
       <div class="preview" aria-live="polite" aria-label="Theme preview">
         <div class="navbar">Navigation Bar</div>
-        <p>This is some example body text inside your theme preview.</p>
-        <button class="button">Accent Button</button>
-        <button class="button danger">Danger Button</button>
+        <div class="preview-content">
+          <p>This is some example body text inside your theme preview.</p>
+          <button class="button">Accent Button</button>
+          <button class="button danger">Danger Button</button>
+        </div>
       </div>
 
       <div class="css-output">
@@ -309,14 +339,11 @@
     const fontSelect = document.getElementById('fontSelect');
     const cssOutput = document.getElementById('cssOutput');
 
-    // Helper to make a 80% opacity version of a hex color
     function hexToOpacity(hex, opacity = 0.8) {
-      // Strip #
-      hex = hex.replace('#','');
-      // Convert to r,g,b
-      let r = parseInt(hex.substring(0,2),16);
-      let g = parseInt(hex.substring(2,4),16);
-      let b = parseInt(hex.substring(4,6),16);
+      hex = hex.replace('#', '');
+      let r = parseInt(hex.substring(0, 2), 16);
+      let g = parseInt(hex.substring(2, 4), 16);
+      let b = parseInt(hex.substring(4, 6), 16);
       return `rgba(${r},${g},${b},${opacity})`;
     }
 
@@ -328,8 +355,6 @@
       const danger = dangerColor.value;
       const font = fontSelect.value;
       const themeClass = themeNameInput.value.trim() || 'custom-theme';
-
-      // Update CSS variables for preview area
       document.documentElement.style.setProperty('--preview-accent', accent);
       document.documentElement.style.setProperty('--preview-bg', bg);
       document.documentElement.style.setProperty('--preview-surface', surface);
@@ -337,8 +362,6 @@
       document.documentElement.style.setProperty('--preview-danger', danger);
       document.documentElement.style.setProperty('--preview-font', `'${font}', sans-serif`);
       document.documentElement.style.setProperty('--preview-accent-overlay', hexToOpacity(accent, 0.8));
-
-      // Dynamically load font from Google Fonts
       const existingLink = document.getElementById('font-link');
       if (existingLink) existingLink.remove();
       const link = document.createElement('link');
@@ -346,8 +369,6 @@
       link.rel = 'stylesheet';
       link.href = `https://fonts.googleapis.com/css2?family=${font.replace(/\s/g, '+')}:wght@400;700&display=swap`;
       document.head.appendChild(link);
-
-      // Generate CSS string
       cssOutput.value = `
 body.${themeClass} {
   font-family: '${font}', sans-serif;
@@ -389,8 +410,6 @@ body.${themeClass} {
       document.execCommand('copy');
       alert('CSS copied to clipboard!');
     }
-
-    // Attach input listeners
     [
       themeNameInput,
       accentColor,
@@ -400,12 +419,11 @@ body.${themeClass} {
       dangerColor,
       fontSelect
     ].forEach(el => el.addEventListener('input', updateTheme));
-
-    // Initial theme update on load
     updateTheme();
   </script>
   <footer class="app-footer">
-  <p>Created by <a href="https://github.com/zachvlat/" target="_blank" rel="noopener noreferrer">zachvlat</a> · GNU v3 License</p>
-</footer>
+    <p>Created by <a href="https://github.com/zachvlat/" target="_blank" rel="noopener noreferrer">zachvlat</a> · GNU v3 License</p>
+  </footer>
 </body>
+
 </html>
